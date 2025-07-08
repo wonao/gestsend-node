@@ -1,0 +1,18 @@
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  background: #1976d2;
+  padding: 1rem;
+  color: white;
+}
+.navbar a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+.container {
+  padding: 1rem;
+}
