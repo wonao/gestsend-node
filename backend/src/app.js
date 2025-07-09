@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const path = require('path');
 const authRoutes = require('./routes/authRoutes');
 const prospectRoutes = require('./routes/prospectRoutes');
 const clientRoutes = require('./routes/clientRoutes');
@@ -22,6 +23,12 @@ app.use('/api/invoices', invoiceRoutes);
 app.use('/api/stats', statsRoutes);
 app.use('/api/logs', logRoutes);
 app.use(errorHandler);
+
+const publicDir = path.resolve(__dirname, '../public');
+app.use(express.static(publicDir));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicDir, 'index.html'));
+});
 
 const PORT = process.env.PORT || 3000;
 
