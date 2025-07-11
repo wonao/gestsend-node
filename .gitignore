@@ -7,3 +7,5 @@ frontend/dist/
 backend/node_modules/
 backend/data/*.db
 INSTALL.md
+backend/public/bundle.js
+backend/public/bundle.js.LICENSE.txt
